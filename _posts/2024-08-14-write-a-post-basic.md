@@ -1,6 +1,5 @@
 ---
 title: Chirpy Post 작성 - 기본
-author: Lojin
 date: 2024-08-17 20:00:00 +0900
 categories: [Blogging, About Post]
 tags: [post, posts, chirpy]
