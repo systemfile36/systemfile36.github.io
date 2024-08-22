@@ -1,3 +1,10 @@
+## 서론 
+본 repository는 [chirpy 테마](https://github.com/cotes2020/jekyll-theme-chirpy)를 포크하여 
+개인용 블로그/포트폴리오 용도로 GitHub Pages를 통해 호스팅하기 위해 만들어졌습니다. 
+
+2024-08-22 fork 해제 후 upstream 설정 
+
+
 <!-- markdownlint-disable-next-line -->
 <div align="center">
 
