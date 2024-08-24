@@ -212,7 +212,7 @@ Jekyll에서는 _Front Matter_를 가진 모든 파일을 처리한다.
 | `site.pages`  | 모든 페이지들의 리스트이다. |
 | `site.posts`  | 모든 post들의 역순 목록이다. |
 | `site.related_posts` | 페이지가 post라면 관련 포스트를 10개까지 표시한다. |
-| `site.static_files` | 모든 [정적 파일](/posts/about-jekyll-content)의 리스트이다. |
+| `site.static_files` | 모든 정적 파일의 리스트이다. |
 | `site.html_pages` | `site.pages`에서 `.html`로 끝나는 것만 가져온 리스트이다. |
 | `site.html_files` | `site.static_files`에서 `.html`로 끝나는 것만 가져온 리스트이다. |
 | `site.collections` | 모든 컬렉션의 리스트이다.(post를 포함한다.) |
