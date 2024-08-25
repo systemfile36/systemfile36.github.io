@@ -7,11 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	var header = document.getElementById('topbar-wrapper');
 	
 	//Find parent of header. (for dynamic width)
-	var container = null;
-	
-	if(header != null) {
-		container = header.parentElement;
-	}
+	var container = header.parentElement;
 	
 	//update header's width. 
 	//for limit header's width to parent container's width
