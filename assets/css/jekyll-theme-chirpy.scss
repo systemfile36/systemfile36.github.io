@@ -9,8 +9,25 @@
 
 /* append your custom style below */
 
+/* for sticky header. when scroll down, this class will be added to header. */
 .fixed-header {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 100;
 }
+/* if click link to some heading when header fixed, scroll to heading is uncorrect */
+/* this will fix that (maybe?)*/
+h2, h3, h4, h5 {
+	scroll-margin-top: 80px;
+}
+
+/*
+#sidebar {
+	background-image: url('../img/favicons/android-chrome-512x512.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: rgba( 255, 255, 255, 0.5 );
+	background-blend-mode: overlay;
+}
+*/
