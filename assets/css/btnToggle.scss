@@ -1,0 +1,79 @@
+/*
+* For implement toggle button.
+check below layout
+
+<label class="toggle">
+	<input type="checkbox">
+	<span class="slider"></span>
+</label>
+
+*/
+
+/* variables for toggle button */
+$toggle-width: 60px;
+$toggle-height: 34px;
+$toggle-padding: 4px;
+$transition-time: .2s;
+
+/* styling toggle container */
+.toggle {
+  position: relative; /* set relative. child elements is relative to this element */
+  display: inline-block;
+  width: $toggle-width;
+  height: $toggle-height;
+}
+
+/* hiding checkbox input element. */
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* background of toggle button */
+.slider {
+  position: absolute; /* Positions relative to the parent element(.toggle). */
+  cursor: pointer; /* when mouse over, cursor change to 'pointer' */
+  top: 0;
+  left: 0;    /* fill parent elements */
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: $transition-time; /* change color over 0.4s. */
+  border-radius: $toggle-height; /* round edge */
+}
+
+/* toggle button's round-moving part. it will move when toggle 
+*  use :before. it will be located before <span class:"slider">
+*/
+.slider:before {
+  position: absolute; /* Positions relative to the parent element(.slider). */
+  content: ""; /* content is empty. (I wanna make just white circle) */
+  height: calc($toggle-height - 2 * $toggle-padding);
+  width: calc($toggle-height - 2 * $toggle-padding);
+  left: $toggle-padding;
+  bottom: $toggle-padding;
+  background-color: white;
+  transition: $transition-time; /* move over 0.4s */
+  border-radius: 50%;
+}
+
+/* Select .slider(background) using next-sibling combinator.  
+*  when input is checked, change background color to green.
+*/
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+/* Select .slider:before(round-move part) using next-sibling combinator.  
+*  when input is checked, move round-move part. 
+*  when input is unchecked, move back. (CSS default) 
+*/
+input:checked + .slider:before {
+  transform: translateX(calc($toggle-width - $toggle-height));
+}
+
+/* when input is unchecked, change background color to red */
+input:not(:checked) + .slider {
+  background-color: #f44336;
+}

@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	//Find TOC elements
 	var toc = document.querySelector('#in_page_toc-list');
-	var tocToggle = document.querySelector('#in_page_toc-toggle');
+	
+	//Find toggle button that located at toc-header
+	var tocToggle = document.querySelector('.in_page_toc-header .toggle input');
 	
 	//if statement for null check
 	if (content && toc) {
@@ -47,13 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 	
 	//add toggle event to tocToggle
-    tocToggle.addEventListener('click', function() {
-		//check display and toggle ('none' <-> 'block')
-		if (toc.style.display === 'none') {
-			tocToggle.textContent = 'Contents-ON'
+	//when checkbox input changed, change display
+    tocToggle.addEventListener('change', function() {
+		//check checkbox is checked and toggle ('none' <-> 'block')
+		if (tocToggle.checked) {
 			toc.style.display = 'block';
 		} else {
-			tocToggle.textContent = 'Contents-OFF'
 			toc.style.display = 'none';
 		}
     });

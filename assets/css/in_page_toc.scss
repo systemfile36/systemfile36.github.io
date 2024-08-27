@@ -1,0 +1,17 @@
+/*
+* For align elements(heading, toggle), set flex-box and styling it
+*/
+
+/* flex-box */
+.in_page_toc-header {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+/* set margin to align */
+.in_page_toc-header .toggle {
+	margin-top: 40px;
+	margin-left: 20px;
+	margin-bottom: 8px;
+}
