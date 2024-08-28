@@ -6,6 +6,7 @@ tags: [liquid, objects, tags, filters]
 description: Liquid에 대한 기본적인 내용을 서술
 ---
 
+
 이하의 글은 [Liquid 공식 문서](https://shopify.github.io/liquid/basics/introduction/)의 Basics를 참고하여 작성하였다.
 
 ## Introduction

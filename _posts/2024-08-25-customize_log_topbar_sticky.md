@@ -6,8 +6,6 @@ tags: [js, css, customize, javascript]
 description: 스크롤 시, 상단바를 화면 상단으로 고정시키기 위해 사용한 방법들 기록
 ---
 
-{% include in_page_toc.html %}
-
 ## 목적
 
 다양한 사이트에서, 메뉴나 검색버튼과 같은 것들을 포함한 헤더를 찾아볼 수 있다. 

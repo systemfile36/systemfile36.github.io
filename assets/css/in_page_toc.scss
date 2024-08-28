@@ -15,3 +15,12 @@
 	margin-left: 20px;
 	margin-bottom: 8px;
 }
+
+/* in_page_toc style */
+#in_page_toc-list li {
+	list-style: none;
+}
+
+#in_page_toc-list li a {
+	color: currentColor;
+}

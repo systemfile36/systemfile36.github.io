@@ -4,6 +4,9 @@
 * layout : go to '_includes' directory and find 'in_page_toc.html'
 */
 
+//if number of toc items more than this, collapse toc
+const TOC_EXPAND_THRESHOLD = 10;
+
 document.addEventListener('DOMContentLoaded', function() {
 	
 	//Find content container for limit range of searching headings
@@ -24,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		//For headings level
 		var tocTree = {};
 
-	headings.forEach((heading, index) => {
+	headings.forEach((heading) => {
 		//Set level by tagName. 
 		var level = parseInt(heading.tagName.charAt(1));
 		
@@ -37,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		
 		//replace whitespace and '%20' to '-'. for match to headings id
 		var href = heading.textContent.toLowerCase().replace(/\s+/g, '-').replace(/%20/g, '-');
+		
+		//set href, and display to 'block'
 		tocItem.href = `#${href}`;
 		tocItem.style.display = 'block';
 		
@@ -47,6 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		tocItemParent.appendChild(tocItem);
 		toc.appendChild(tocItemParent);
 	});
+	
+	//if height of toc is too long, collapse toc when loaded
+	if(headings.length > TOC_EXPAND_THRESHOLD) {
+		toc.style.display = 'none';
+		tocToggle.checked = false;
+	}
 	
 	//add toggle event to tocToggle
 	//when checkbox input changed, change display
