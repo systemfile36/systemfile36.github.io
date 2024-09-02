@@ -3,12 +3,9 @@
 <section id="in_page_toc-wrapper" class="ps-0 pe-4">
 	<!--Flex box for align elements(heading, toggle). check in_page_toc.scss -->
 	<div class="in_page_toc-header">
-		<h2 data-toc-skip id="in_page_toc-toggle" class="panel-heading ps-3 mb-2">Contents</h2>
+		<h2 data-toc-skip id="in_page_toc-title" class="panel-heading ps-3 mb-2">Contents</h2>
 		<!-- Toggle button for toggle in_page_toc. check btnToggle.scss -->
-		<label class="toggle">
-			<input type="checkbox" checked=true>
-			<span class="slider"></span>
-		</label>
+		{% include btnToggle.html %}
 	</div>
    <nav id="in_page_toc">
 	<ul id="in_page_toc-list" class="toc-list"></ul> <!-- <li> elements will be added by script -->
