@@ -24,9 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		//if some heading has 'data-toc-skip' attribute, skip them
 		var headings = content.querySelectorAll('h2:not([data-toc-skip]), h3:not([data-toc-skip]), h4:not([data-toc-skip]), h5:not([data-toc-skip])');
 		
-		//For headings level
-		var tocTree = {};
-
 	headings.forEach((heading) => {
 		//Set level by tagName. 
 		var level = parseInt(heading.tagName.charAt(1));
