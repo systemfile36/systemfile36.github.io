@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		//replace whitespace and '%20' to '-'. for match to headings id
 		var href = heading.textContent.toLowerCase().replace(/\s+/g, '-').replace(/%20/g, '-');
 		
+		//replace special character to empty string
+		href = href.replace(/[^a-zA-Z0-9가-힣-\s]/g, '');
+		
 		//set href, and display to 'block'
 		tocItem.href = `#${href}`;
 		tocItem.style.display = 'block';

@@ -16,6 +16,11 @@
 	margin-bottom: 8px;
 }
 
+/* for seperating toc from text of post, set margin */
+#in_page_toc-wrapper {
+	margin-bottom: 40px;
+}
+
 /* in_page_toc style */
 #in_page_toc-list li {
 	list-style: none;
@@ -23,4 +28,9 @@
 
 #in_page_toc-list li a {
 	color: currentColor;
+	border-bottom: none;
+}
+
+#in_page_toc-list {
+	border-left: 2px solid #919191;
 }
